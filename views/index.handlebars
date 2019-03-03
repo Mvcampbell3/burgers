@@ -1,0 +1,29 @@
+<h1>Burger List</h1>
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{>burgers/burger-block devour=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<br>
+<hr>
+<br>
+
+<div class="addBurger">
+    <input type="text" name="" id="burgerName">
+    <button id="addBtn"class="addBtn">Add Burger</button>
+</div>
+
+<br>
+<hr>
+<br>
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{>burgers/burger-block devour=false}}
+        {{/if}}
+    {{/each}}
+</ul>
