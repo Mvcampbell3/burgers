@@ -29,15 +29,12 @@ module.exports = {
     }, 
 
     change: function(tableName, val, id, cb) {
-        console.log(val + " is val before");
         let querySting = "UPDATE ?? SET devoured = (?) WHERE id = (?)";
-        console.log(querySting);
         if (val === "true") {
             var term = 1;
         } else {
             var term = 0;
         }
-        console.log(term + " is val");
         con.query(querySting, [tableName, term, id], function(err, data) {
             if (err) throw err;
             cb(data);

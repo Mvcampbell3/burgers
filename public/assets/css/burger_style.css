@@ -1,5 +1,78 @@
 body{
     margin: 0;
     padding: 0;
+    user-select: none;
     background-color: deepskyblue;
+}
+
+header{
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.addBurger{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.addBurger input[type=text] {
+    font-size: 18px;
+    padding: 3px;
+    outline: none;
+    border: 1px black solid;
+    margin-right: 5px;
+}
+
+.line{
+    width: 100%;
+    margin: 1em 0;
+    height: 5px;
+    background-color: black;
+}
+
+.btn{
+    display: block;
+    border: 1px black solid;
+    padding: 10px 15px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 15px;
+    outline: none;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.burger{
+    display: flex;
+    width: 100%;
+    margin: 1em 0;
+    position: relative;
+    justify-content: space-between;
+    border: 1px black solid;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 5px 5px 25px black;
+    animation-name: popUp;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    transform: rotateZ(3deg)
+}
+
+@keyframes popUp{
+    0% {transform: rotateZ(3deg)}
+    50% {transform: rotateZ(-3deg)}
+    100% {transform: rotateZ(0deg)}
 }

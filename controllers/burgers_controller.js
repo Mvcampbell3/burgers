@@ -20,7 +20,6 @@ router.get("/", (req, res) => {
         let sendObj = {
             burgers: data
         }
-        console.log(sendObj)
         res.render("index", sendObj)
     })
 })
@@ -38,9 +37,7 @@ router.delete("/api/burger/:id", (req, res) => {
 })
 
 router.put("/api/burger/:id", (req,res) => {
-    console.log(req.body.devoured + " = req.body.devoured at id = " + req.params.id)
     burger.change(req.body.devoured, req.params.id, (result) => {
-        console.log(result);
         res.json({ok:true})
     })
     
