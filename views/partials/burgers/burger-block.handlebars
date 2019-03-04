@@ -1,11 +1,13 @@
-<div class="burger">
+<div class="burger burger{{devoured}}">
     <h2>{{name}}</h2>
+    <div class="buttonArea">
+        <button class="devourBtn btn" data-which="{{this.id}}" data-newDevour="{{devour}}">
+            {{#if devoured}}Put Back{{else}}Devour{{/if}}
+        </button>
 
-    <button class="devourBtn btn" data-which="{{this.id}}" data-newDevour="{{devour}}">
-        {{#if devoured}}Put Back{{else}}Devour{{/if}}
-    </button>
+        <button class="deleteBtn btn" data-which="{{this.id}}">
+            Delete
+        </button>
+    </div>
 
-    <button class="deleteBtn btn" data-which="{{this.id}}">
-        Delete
-    </button>
 </div>
