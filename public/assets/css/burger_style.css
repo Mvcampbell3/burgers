@@ -76,6 +76,7 @@ header{
 }
 
 .burger{
+    box-sizing: border-box;
     display: flex;
     width: 100%;
     margin: 1em 0;
@@ -115,4 +116,47 @@ header{
     0% {transform: rotateZ(3deg)}
     50% {transform: rotateZ(-3deg)}
     100% {transform: rotateZ(0deg)}
+}
+
+@media (max-width: 1025px) {
+    .buttonArea{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttonArea button{
+        width: 90%;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .btn{
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .displayArea{
+        width:45%;
+    }
+
+    .burger{
+        flex-direction: column;
+        text-align: center;
+        font-size: 12px;
+        max-width: 150px;
+        margin: 0 auto 20px auto;
+    }
+
+    .addBurger{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .addBtn{
+        margin-top: 20px;
+    }
+    
 }
